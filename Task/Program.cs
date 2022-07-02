@@ -46,3 +46,24 @@ while(index<arrIn.Length)
         index++;
     }
 }
+
+Console.Clear();
+Console.WriteLine("Let's create your array of strings");
+Console.Write("Enter your number of strings: ");
+int lengthIn=int.Parse(Console.ReadLine()??"0");
+string[]arrayIn=CreateArrStr(lengthIn);
+Console.WriteLine("Enter your strings: ");
+FillArrStr(arrayIn);
+Console.Write($"Your array: ");
+PrintArrStr(arrayIn);
+Console.WriteLine();
+Console.Write("Enter your number of symbols: ");
+int numbSymb=int.Parse(Console.ReadLine()??"0");
+int lengthOut=FindAmountStr(arrayIn,numbSymb);
+if (lengthOut>0)
+{
+string[]arrayOut=CreateArrStr(lengthOut);
+FillArrVal(arrayIn,arrayOut,numbSymb);
+Console.Write($"New array: ");
+PrintArrStr(arrayOut);    
+}
