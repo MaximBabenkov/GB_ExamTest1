@@ -20,3 +20,29 @@ void PrintArrStr(string[]arr)
     Console.Write($"{arr[i]} ");
 }
 
+int FindAmountStr(string[]array,int value)
+{
+int amount=0;
+for(int index=0;index<array.Length;index++)
+    if (array[index].Length<=value)
+        amount++;
+return amount;
+}
+
+void FillArrVal(string[]arrIn,string[]arrOut,int val)
+{
+int index=0;
+int i=0;
+while(index<arrIn.Length)
+    if (arrIn[index].Length<=val)
+    {
+        arrOut[i]=arrIn[index];
+        i++;
+        index++;
+        
+    }
+    else
+    {
+        index++;
+    }
+}
